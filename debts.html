@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سجل - الديون</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="header-content">
+        <h1><i class="fas fa-hand-holding-usd"></i> الديون</h1>
+        <p>إدارة ديونك وديون الآخرين</p>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="summary-cards">
+        <div class="summary-card owed">
+          <h3>ديون عليك</h3>
+          <div class="amount" id="owed-amount">0 جنيه</div>
+        </div>
+        <div class="summary-card debt">
+          <h3>ديون لك</h3>
+          <div class="amount" id="debt-amount">0 جنيه</div>
+        </div>
+      </div>
+
+      <form id="debt-form" class="data-form">
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" id="name" placeholder="اسم الشخص" required>
+          </div>
+          <div class="form-group">
+            <input type="number" id="amount" placeholder="المبلغ (جنيه)" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <select id="type" required>
+              <option value="">اختر النوع</option>
+              <option value="owed">دين عليك</option>
+              <option value="debt">دين لك</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="text" id="note" placeholder="ملاحظات (اختياري)">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="date" id="date" required>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          <i class="fas fa-plus"></i> إضافة دين
+        </button>
+      </form>
+
+      <div class="data-list-container">
+        <div id="debt-list" class="data-list"></div>
+      </div>
+    </main>
+
+    <nav class="bottom-nav">
+      <a href="index.html" class="nav-item">
+        <i class="fas fa-chart-pie"></i>
+        <span>الإحصائيات</span>
+      </a>
+      <a href="transactions.html" class="nav-item">
+        <i class="fas fa-exchange-alt"></i>
+        <span>المعاملات</span>
+      </a>
+      <a href="debts.html" class="nav-item active">
+        <i class="fas fa-hand-holding-usd"></i>
+        <span>الديون</span>
+      </a>
+      <a href="reports.html" class="nav-item">
+        <i class="fas fa-file-alt"></i>
+        <span>التقارير</span>
+      </a>
+    </nav>
+  </div>
+
+  <script src="debts.js"></script>
+</body>
+</html>
